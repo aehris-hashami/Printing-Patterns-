@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void print_star(int l){
+    if(l<1) return;
+
+    for(int i=0; i<=l; i++){
+        for(int j=1; j<=(2*l-1); j++)
+            if(l-i <= j && j <= l+i)
+                if(!(i%2))
+                    if(!(j%2)) cout << "* ";
+                    else       cout << "  ";
+                else
+                    if(j%2)    cout << "* ";
+                    else       cout << "  ";
+            else               cout << "  ";
+        cout << endl;
+    }
+}
+
+int main(){
+	cout << "Number of lines: ";
+	int l; cin >> l;
+
+	print_star(l);
+
+	return 0;
+}
