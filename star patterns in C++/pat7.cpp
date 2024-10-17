@@ -1,6 +1,13 @@
 #include <iostream>
 using namespace std;
 
+//the following is the pattern is being produced:
+// * * * * * * *
+// * * *   * * *
+// * *       * *
+// *           *
+
+
 void print_star(int l){
     if(l<1) return;
 
